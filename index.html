@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html>
-
-    <!--HEAD-->
+    
+    <!-- Head -->
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <title>Tanuj Chowdhury</title>
-        <link rel="stylesheet" type="text/css" href="stylesheet/tanuj.css">
+        <link rel="stylesheet" type="text/css" href="stylesheet/portfolio.css">
+        <link rel="shortcut icon" type="img/jpg" href="images/coding_icon.png">
     </head>
 
-    <!--BODY-->
-    <body>
+    <!-- Body -->
+    <body class="Background">   
 
-        <!--NAV BAR-->
+        <!-- Navbar -->
         <div class="Navbar">
             <a class="active" href="#Home">Home</a>
+            <!-- New section added -->
+            <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
-            <a href="#Contact">Contact</a>
+            <!-- Onclick and ondblclick functions added to open and close the contact form -->
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
         </div>
-        <br>
-        <br>
 
-        <!--BACKGROUND VIDEO-->
+        <!-- Background video -->
         <div id="Home">
             <video autoplay muted loop id="Video">
                 <source src="images/video/video.mp4" type="video/mp4">
-                <!--Display message if video fails to run-->
+                <!-- Display message if video fails to run -->
                 Your browser does not support HTML5 video.
             </video>
-        </div>    
+        </div>
+
+        <!-- Video text -->
         <div class="Video_Text">
             <h1 class="white-text">Tanuj Chowdhury's Portfolio</h1>
             <strong>
@@ -47,71 +51,119 @@
             </strong>
         </div>
 
-        <!--ABOUT-->
-        <div class="Row" id="About">
-            <!--LEFT COLUMN-->
-            <div class="Column_2">
-                <img src="images/image1.webp" alt="Laptop Image">
+        <!-- Slideshow section added -->
+        <div id="Slideshow">
+            <div id="Slideshow_Background"> 
+                <div id="Slideshow_Container">
+                    <!-- Slide 1 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/Square Personal Photo.jpg" alt="Picture of me">
+                        <div class="text">I'm available to assist you on your project!</div>
+                    </div>
+                    <!-- Slide 2 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS, and JS logos"> 
+                        <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+                    </div>
+                    <!-- Slide 3 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/Python.png" alt="Python logo">
+                        <div class="text">the popular programming language Python,</div>
+                    </div>
+                    <!-- Slide 4 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/C_Sharp_and_Dot_NET.png" alt="C# logo">
+                        <div class="text">C#, .NET Framework, ASP.NET, MVC, </div>
+                    </div>
+                    <!-- Slide 5 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/SQL_and_Database.jpg" alt="SQL logo"> 
+                        <div class="text">back end development, databases and SQL.</div>
+                    </div>
+                    <!-- Slide 6 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/Square Custom Picture.jpg" alt="Picture of me"> 
+                        <div class="text"><a class="white-text contact" onclick="openForm()">Contact me now!</a></div> 
+                    </div>
+                    <!-- Previous and next buttons -->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br> <!-- Adds a space between the slideshow images and the dots -->
+
+                <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                    <span class="dot" onclick="currentSlide(6)"></span> 
+                </div>
             </div>
-            <!--RIGHT COLUMN-->
+        </div>
+
+        <!-- About section -->
+        <div class="Row" id="About">
+            <!-- Left column -->
+            <div class="Column_2">
+                <img src="images/Square Custom Picture.jpg" alt="Picture of me">
+            </div>
+            <!-- Right column -->
             <div class="Column_1">
                 <h1>About</h1>
                 <p>
-                    I am new software developer who loves to code! I love the outdoors and learning new skills.
+                    I'm a new software developer who loves to code! I love the outdoors and learning new skills.
                     <br>
-                    <br>I graduated from <a href="https://www.ucsb.edu/" target="blank">UCSB</a> and am currently enrolled in <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a> full-stack developer bootcamp.
+                    <br>I graduated from <a href="https://www.ucsb.edu/" target="blank">UCSB</a> and am currently enrolled in <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a> full-stack developer bootcamp. I am trained and experienced in HTML, CSS, and JavaScript.
                     <br>
-                    <br>I would love to work with you on your project. <a href="#Contact">Contact</a> me below!
+                    <br>I am a full-stack developer and would love to work with you on your project. <a onclick="openForm()" class="contact">Contact</a> me below!
+                
                 </p>
             </div>
         </div>
 
-        <!--GITHUB-->
+        <!-- GitHub section -->
         <div class="Row" id="GitHub">
-            <!--LEFT COLUMN-->
+            <!-- Left column -->
             <div class="Column_1">
                 <h1>GitHub</h1>
-                <p class="center">
-                    You can view my coding projects on my GitHub profile here:
+                <p>You can view my coding projects on my GitHub profile here:
                     <br>
                     <p class="center"><a href="https://github.com/tanujchowdhury" target="_blank">Tanuj's Github</a></p>
                 </p>
             </div>
-            <!--RIGHT COLUMN-->
+            <!-- Right column -->
             <div class="Column_2">
-                <a href="https://github.com/tanujchowdhury" target="_blank"><img src="images/GitHub.png" alt="GitHub Logo"></a>
+                <a href="https://github.com/tanujchowdhury" target="_blank"><img src="images/GitHub.png"></a>
             </div>
         </div>
 
-        <!--CONTACT-->
-        <div class="Row" id="Contact">
-            <!--CONTACT IMAMGE, LEFT COLUMN-->
-            <div class="Column_2 Column_tall">
-                <img src="images/image2.jpg" alt="Contact Image">
-            </div>
-            <!--CONTACT FORM, RIGHT COLUMN-->
-            <div class="Column_1 Column_tall">
-                <h1>Contact Me</h1>
-                <!--Specifies where to send form data, blank for now-->
-                <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
+        <!-- Contact form -->
+        <div id="Contact">
+           <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+           <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/chowdhury.tanuj@gmail.com" method="POST" class="form-container"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+                    <h1>Contact</h1>
+                    <label for="name"><b>Name</b></label>
+                      <input type="text" placeholder="Type your name here" name="name" required>
+                    <label for="phone"><b>Phone</b></label>
+                      <input type="text" placeholder="Type your phone number here" name="phone">
+                    <label for="email"><b>Email</b></label>		
+                      <input type="text" placeholder="Type your email address here" name="email" required>
+                    <label for="message"><b>Message</b></label>
+                      <input type="text" placeholder="Type your message here" name="message">
+         
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
-            </div>
+           </div>
         </div>
-
-        <!--FOOTER-->
+        
+        <!-- Footer section -->
         <footer>
-            <p>
-                <p class="center">Tanuj Chowdhury 2022</p>
-                <br>
-            </p>
+            <p class="center">Tanuj Chowdhury 2022</p>
         </footer>
-
+        <script src="JS/portfolio.js"></script>
     </body>
 </html>
