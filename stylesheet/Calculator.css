@@ -82,3 +82,10 @@ button:hover {
     grid-gap: 20px;
     padding: 20px;
 }
+
+a {
+    margin: 2px;
+    padding: 2px;
+    font-size: 2rem;
+    text-decoration: none;
+}
