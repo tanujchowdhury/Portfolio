@@ -1,4 +1,11 @@
 /***** GENERAL STYLING *****/
+:root{
+    --main-color: #B63621;
+    --main-highlight: #F7B18B;
+    --secondary-color: #662B24;
+    --dark-color: #0E0A0B;
+    --light-color: #FAC7A7;
+}
 
 /*Affects entire document */
 html {
@@ -28,7 +35,7 @@ h1 {
     font-family: "Trebuchet MS", Optima; /* Sets the font family of all h1 headings */
     text-align: center; /* Centering all h1 elements */
     margin-top: 3%; /* Adds a small margin above h1 elements */
-    color: #1a1a1a; 
+    color: var(--dark-color); 
 }
 
 /* Heading 1 element hover effect */
@@ -40,7 +47,7 @@ h1:hover {
 
 /* Styling for Portfolio Title Text */
 .white-text {
-    color: #fff;/* This is used to change the color of the Portfolio Title text */
+    color: var(--main-color);/* This is used to change the color of the Portfolio Title text */
     padding-top: 10vh; /* Adds padding (equal to 10% of the viewport height) to the top of the Portfolio Title text */
 }
 
@@ -73,7 +80,7 @@ p:hover {
 
 /* Anchor elements */
 a {
-    color: blue; /* This ensures all links are blue */
+    color: var(--secondary-color); /* This ensures all links are blue */
     cursor: pointer; /* This ensures all links change the mouse to a pointer when hovered over or clicked */
     text-decoration: underline; /* This ensures all links are underlined */
 }
@@ -101,14 +108,14 @@ img:hover {
 /*Styling for footer element */
 footer {
     padding: 2%; /* This gives the footer padding that is equal to 2% of the width of the element's area */
-    background-color: white;
+    background-color: var(--main-color);
 }
 /***** End of General Styling *****/
 
 /***** Navbar Styling *****/
 .Navbar {
     overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
-    background-color: black; /* This colors the navbar black */
+    background-color: var(--dark-color); /* This colors the navbar black */
     position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
     top: 0; /* This ensures no space is displayed above the navbar */
     width: 100%; /* This makes the navbar span the entire width of the page */
@@ -127,7 +134,7 @@ footer {
 .Navbar a {
     float: left; /* This specifies that the text floats on the left on the navbar */
     display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
-    color: white; /* This is the font color for text on our navbar */
+    color: var(--light-color); /* This is the font color for text on our navbar */
     padding: .75vw 1vw; /* This adds padding around our text */
     text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
     font-family: Avant Garde, Helvetica; /* This specifies the font family for text on our navbar */
@@ -146,8 +153,8 @@ footer {
 
 /*Navbar hover effects */
 .Navbar a:hover {
-    background-color: #f4f4f4; /* Defines the background color that will display when you hover over the link */
-    color: black; /* This defines the font color that will display when navbar a elements are hovered over */
+    background-color: var(--main-highlight); /* Defines the background color that will display when you hover over the link */
+    color: var(--dark-color); /* This defines the font color that will display when navbar a elements are hovered over */
     font-weight: bold; /* This makes the text on the navbar bold when hovered over */
     cursor: pointer;
     transition: 0.5s ease-in; /* Creates a smooth transition for the hover trigger */
@@ -155,7 +162,7 @@ footer {
 
 /* Navbar home button */
 .Navbar a.active { /* This targets the a element on the navbar with the "active" class */
-    background-color: darkgray;
+    background-color: var(--main-color);
 }
 /***** End of Navbar Styling *****/
 
@@ -181,7 +188,7 @@ footer {
 /* Texts over the video */
 .Video_Text {
     background: rgba(0, 0, 0, 0.5); /* This provides a semi-transparents background for the text to sit over */
-    color: white; /* Makes the font color white */
+    color: var(--light-color); /* Makes the font color white */
     width: 100%; /* Ensures the video-text container fills the width of the video */
     height: 100vh; /* This ensures the video-text container fills the height of the viewport so that the slideshow is not partially displayed */
     padding-top: 2vh; /* This adds padding around the video-text container so that the background goes slightly beyond the text */
@@ -257,7 +264,7 @@ footer {
 
 /* Slideshow text */
 .text {
-    color: white; 
+    color: var(--light-color); 
     padding: 1vw;
     position: absolute; /* This ensures the text is positioned within the image */
     bottom: 0; /* This property sets the text at the bottom of the image */
@@ -318,7 +325,7 @@ footer {
     width: 50%; /* This ensures the column takes up half of the page width */
     padding: 1.6%;
     height: 500px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
-    background-color: #f2f2f2; /* Sets the background color of the left columns */
+    background-color: var(--main-highlight); /* Sets the background color of the left columns */
 }
 
 .Column_2 {
@@ -326,7 +333,7 @@ footer {
     width: 50%;
     padding: 1.6%;
     height: 500px;
-    background-color: #4d4d4d;
+    background-color: var(--light-color);
 }
 
 /* This inserts something after the content of selected elements (in this case the elements with class "Row") */
